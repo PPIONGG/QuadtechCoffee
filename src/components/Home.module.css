@@ -1,0 +1,59 @@
+.container {
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/coffee-beans-top-view-white-background-space-text_176474-5028.jpg?w=2000&t=st=1687514669~exp=1687515269~hmac=1562d0f0d50b514e83468a1cc4a051ddcbe48fafd72425faf60dc423a7a9942d");
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+.main1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.textQuadra {
+    font-size: 80px;
+    font-weight: bold;
+}
+.mainbt {
+    display: flex;
+    gap: 3em;
+    margin-top: 3em;
+}
+button.bt {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+
+  button.bt:hover {
+    background-color: #9d5c28;
+    box-shadow: 0px 15px 20px rgba(236, 162, 82, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  button.bt:active {
+    transform: translateY(-1px);
+  }
+  .main2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10em;
+  }
+.img1 {
+    width: auto;
+    height: 400px;
+}
