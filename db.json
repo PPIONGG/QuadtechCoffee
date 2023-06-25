@@ -3,7 +3,7 @@
     {
       "id": "9cipFlWtY7OTbKbj2EA9o",
       "imgURL": "https://s359.kapook.com/pagebuilder/aa5ddfe9-01f8-43d1-a1fc-e93bb4325bc5.jpg",
-      "name": "อเมริกาโน่ Americano",
+      "name": "Americano",
       "type": {
         "hot": 55,
         "cold": 65,
@@ -13,7 +13,7 @@
     {
       "id": "JXZnHnfXetcj9sigvPi4z",
       "imgURL": "https://www.nestleprofessional.in/sites/default/files/2021-08/Espresso_0.webp",
-      "name": "เอสเพรสโซ่ Espresso",
+      "name": "Espresso",
       "type": {
         "hot": 55,
         "cold": 65,
@@ -23,7 +23,7 @@
     {
       "id": "W5SQ3Mh8uZjrqhJMkDEeT",
       "imgURL": "https://ajnownirun.files.wordpress.com/2015/02/latte.png",
-      "name": "ลาเต้ Latte",
+      "name": "Latte",
       "type": {
         "hot": 60,
         "cold": 70,
@@ -33,7 +33,7 @@
     {
       "id": "LZQKay_RYy3VB2XLQrHil",
       "imgURL": "https://www.acouplecooks.com/wp-content/uploads/2021/12/Mocha-Cappuccino-004.jpg",
-      "name": "คาปูชิโน่ Cappuccino",
+      "name": "Cappuccino",
       "type": {
         "hot": 60,
         "cold": 70,
@@ -43,7 +43,7 @@
     {
       "id": "ZEHuyO-PMeivIZ3KmKH1k",
       "imgURL": "https://images.ctfassets.net/v601h1fyjgba/7ndAMJpSr0vGnWyUGHlygd/40c1dd45124f636097b2775a09c290c6/Caramel_Macchiato.jpg",
-      "name": "คาราเมล แมคคิอาโต้ Caramel Macchiato",
+      "name": "Caramel Macchiato",
       "type": {
         "hot": 70,
         "cold": 80,
@@ -52,8 +52,8 @@
     },
     {
       "id": "b82QUoLh_Bp0u2qKqTI0M",
-      "imgURL": "https://i0.wp.com/foamycoffee.com/wp-content/uploads/2021/09/16-2.jpg?resize=685%2C456&ssl=1",
-      "name": "ชาเขียวมัทฉะ Matcha Green Tea",
+      "imgURL": "https://chobreview.com/wp-content/uploads/2021/11/ผงชาเขียว-ยี่ห้อไหนดี-มีประโยชน์.jpg",
+      "name": "Matcha Green Tea",
       "type": {
         "hot": 45,
         "cold": 55,
@@ -62,8 +62,8 @@
     },
     {
       "id": "dn4IAJokKAqnk5uCt0S9a",
-      "imgURL": "https://images1.livehindustan.com/uploadimage/library/2022/11/24/16_9/16_9_1/tea_1669251010.jpg",
-      "name": "ชานม Milk Tea",
+      "imgURL": "https://www.organicfacts.net/wp-content/uploads/milktea1.jpg",
+      "name": "Milk Tea",
       "type": {
         "hot": 45,
         "cold": 55,
@@ -72,8 +72,8 @@
     },
     {
       "id": "LaYKn4jLdwyIk5_Hx6hIa",
-      "imgURL": "https://t3.ftcdn.net/jpg/01/06/14/76/360_F_106147605_xmXfzxpraUtLQZkwTYWhjIJc0dkBkN8Y.jpg",
-      "name": "ชานมคาราเมล Caramel Milk Tea",
+      "imgURL": "https://media.istockphoto.com/id/1248245917/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%AA%E0%B9%84%E0%B8%95%E0%B8%A5%E0%B9%8C%E0%B8%AE%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%87.jpg?s=612x612&w=0&k=20&c=h0pdfCKTIltuf6S1AVH3fLWiA9tpGiECDVtWfC69VAk=",
+      "name": "Caramel Milk Tea",
       "type": {
         "hot": 45,
         "cold": 55,
@@ -82,13 +82,56 @@
     },
     {
       "id": "-vyvNT5NvXY-o7WqBhNZF",
-      "imgURL": "https://images.healthshots.com/healthshots/en/uploads/2022/12/28131257/hot-chocolate-1600x900.jpg",
-      "name": "โกโก้ Cocoa",
+      "imgURL": "https://www.carolinescooking.com/wp-content/uploads/2020/12/Spanish-hot-chocolate-featured-pic-sq.jpg",
+      "name": "Cocoa",
       "type": {
         "hot": 45,
         "cold": 55,
         "smoothie": 60
       }
     }
+  ],
+  "bill": [
+    [
+      {
+        "name": "Caramel Macchiato",
+        "quantity": 3,
+        "totalPrice": 210
+      }
+    ],
+    [
+      {
+        "name": "Espresso",
+        "quantity": 1,
+        "totalPrice": 55
+      }
+    ],
+    [
+      {
+        "name": "Americano",
+        "quantity": 1,
+        "totalPrice": 55
+      },
+      {
+        "name": "Espresso",
+        "quantity": 1,
+        "totalPrice": 65
+      },
+      {
+        "name": "Latte",
+        "quantity": 1,
+        "totalPrice": 70
+      },
+      {
+        "name": "Cappuccino",
+        "quantity": 1,
+        "totalPrice": 75
+      },
+      {
+        "name": "Caramel Macchiato",
+        "quantity": 1,
+        "totalPrice": 80
+      }
+    ]
   ]
 }

@@ -4,3 +4,6 @@
 - npm start 
 - npm install nanoid
 - npm install react-icons --save
+
+
+## js

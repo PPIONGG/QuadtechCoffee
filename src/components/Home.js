@@ -15,12 +15,11 @@ function Home() {
           </div>
           <div>
             <NavLink to="/admin" activeClassName="active-link">
-              <button className={styles.bt}>admin</button>
+              <button className={styles.bt}>Manage</button>
             </NavLink>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

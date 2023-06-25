@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Users.module.css";
 import { AiOutlineShoppingCart, AiOutlineDelete } from "react-icons/ai";
 import { GrHomeRounded } from "react-icons/gr";
+import "./../App.css";
 
 function Users() {
   const [data, setData] = useState([]);
@@ -79,87 +80,105 @@ function Users() {
   const handleDelete = (index) => {
     setPurchasedItems((prevItems) => prevItems.filter((_, i) => i !== index));
   };
-
+  
   const handlePayment = () => {
     console.log("ราคารวมทั้งหมด:", totalPrice);
-    alert("ชำระเงินเสร็จสิ้น");
-    setPurchasedItems([]);
+    if (purchasedItems.length > 0) {
+      const billData = purchasedItems.map((item) => ({
+        name: item.name,
+        quantity: item.quantity,
+        totalPrice: item.selectedPrice * item.quantity,
+      }));
+  
+      axios
+        .post("http://localhost:4000/bill", billData)
+        .then((res) => {
+          console.log("บันทึกข้อมูลเรียบร้อยแล้ว:", res.data);
+          alert("Payment Complete.");
+          setPurchasedItems([]);
+        })
+        .catch((err) => {
+          console.log("เกิดข้อผิดพลาดในการบันทึกข้อมูล:", err);
+          alert("An error occurred during payment.");
+        });
+    } else {
+      alert("No items to pay for.");
+    }
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.main1}>
-        <div className={styles.main1text}>
-          Quadra Coffee
-        </div>
-        <Link to='/' className={styles.main1text1}>
+        <div className={styles.textqd}>Quadra Coffee</div>
+        <Link to="/" className={styles.bthome}>
           <button className={styles.Btn}>
-           <div style={{marginLeft:'-0.4em',marginBottom:'-0.5em'}}><GrHomeRounded/></div>
+            <div className={styles.mgbtn}>
+              <GrHomeRounded />
+            </div>
           </button>
         </Link>
       </div>
       <div className={styles.main2}>
-        <div className="divtable">
+        <div className={styles.scrollmain}>
           <table className={styles.table}>
             <thead>
               <tr>
-                <th scope="col">รูปภาพ</th>
-                <th scope="col">ชื่อ</th>
-                <th scope="col">ประเภท</th>
-                <th scope="col">ราคา</th>
-                <th scope="col">จำนวน</th>
-                <th scope="col">การกระทำ</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
               {data.map((d, i) => (
                 <tr key={i}>
-                  <td style={{ borderBottom: "1px solid #ceced4" }}>
+                  <td>
                     <img
+                      className={styles.imgmenu}
                       src={d.imgURL}
                       alt="สินค้า"
-                      style={{ width: "100px", height: "100px" }}
                     />
                   </td>
-                  <td style={{ borderBottom: "1px solid #ceced4" }}>
-                    {d.name}
-                  </td>
-                  <td style={{ borderBottom: "1px solid #ceced4" }}>
+                  <td>{d.name}</td>
+                  <td>
                     <select
+                      className={styles.selectmenu}
                       value={d.selectedType || ""}
                       onChange={(e) => handleTypeChange(e, i)}
                     >
-                      <option value="">เลือกประเภท</option>
-                      <option value="hot">ร้อน</option>
-                      <option value="cold">เย็น</option>
-                      <option value="smoothie">สมูทตี้</option>
+                      <option value="">Select</option>
+                      <option value="hot">Hot</option>
+                      <option value="cold">Cold</option>
+                      <option value="smoothie">Smoothie</option>
                     </select>
                   </td>
-                  <td style={{ borderBottom: "1px solid #ceced4" }}>
+                  <td>
                     {d.selectedType && d.selectedType !== "เลือกประเภท" ? (
                       <>{d.type[d.selectedType]} บาท</>
                     ) : null}
                   </td>
-                  <td style={{ borderBottom: "1px solid #ceced4" }}>
+                  <td>
                     <div>
                       <button
-                        className={styles.btminusplus}
+                        className="btEfminusplus"
                         onClick={() => decrementQuantity(i)}
                       >
                         -
                       </button>
                       <span> &nbsp;&nbsp;{d.quantity || 1}&nbsp;&nbsp;</span>
                       <button
-                        className={styles.btminusplus}
+                        className="btEfminusplus"
                         onClick={() => incrementQuantity(i)}
                       >
                         +
                       </button>
                     </div>
                   </td>
-                  <td style={{ borderBottom: "1px solid #ceced4" }}>
+                  <td>
                     <button
-                      className={styles.btshop}
+                      className="btEfshop"
                       onClick={() => handleBuy(i)}
                       type="button"
                       disabled={
@@ -171,7 +190,9 @@ function Users() {
                         )
                       }
                     >
-                      <AiOutlineShoppingCart />
+                      <div className={styles.mgbtnshop}>
+                        <AiOutlineShoppingCart />
+                      </div>
                     </button>
                   </td>
                 </tr>
@@ -183,30 +204,30 @@ function Users() {
       <div className={styles.main3}>
         <div className={styles.card}>
           <div className={styles.textcard1}>
-            <p>รายการสินค้าที่สั่งซื้อ</p>
+            <p>Ordered Items</p>
           </div>
           <div className={styles.textcard2}>
-            <table className={styles.table}>
+            <table className={styles.tablecard}>
               <thead>
                 <tr>
-                  <th>ชื่อ</th>
-                  <th>ประเภท</th>
-                  <th>ราคา</th>
-                  <th>ราคา</th>
-                  <th>ราคารวม</th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total Price</th>
                 </tr>
               </thead>
               <tbody>
                 {purchasedItems.map((item, index) => (
-                  <tr>
+                  <tr key={index}>
                     <td>{item.name}</td>
                     <td>{item.type} </td>
-                    <td>{item.selectedPrice} บาท </td>
-                    <td>{item.quantity} แก้ว </td>
-                    <td>{item.selectedPrice * item.quantity} บาท</td>
+                    <td>{item.selectedPrice}</td>
+                    <td>{item.quantity}</td>
+                    <td>{item.selectedPrice * item.quantity} Bath</td>
                     <td>
                       <button
-                        className={styles.btdelete}
+                        className="btdelete"
                         onClick={() => handleDelete(index)}
                       >
                         <AiOutlineDelete />
@@ -218,14 +239,14 @@ function Users() {
             </table>
           </div>
           <div className={styles.textcard3}>
-            ราคารวมทั้งหมด: {totalPrice} บาท
+            Total Price : {totalPrice} Bath
             {purchasedItems.length > 0 ? (
-              <button className={styles.btpayment} onClick={handlePayment}>
-                ชำระเงิน
+              <button className="btpayment" onClick={handlePayment}>
+                Pay
               </button>
             ) : (
-              <button className={styles.btpayment} disabled>
-                ชำระเงิน
+              <button className="btpayment" disabled>
+                Pay
               </button>
             )}
           </div>

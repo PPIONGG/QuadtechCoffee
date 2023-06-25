@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -15,4 +16,177 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btEfminusplus {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 3em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btEfminusplus:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btEfminusplus:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btEfminusplus:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.btEfshop {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 3em;
+  border-radius: 1rem;
+  color: rgb(94, 194, 105);
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btEfshop:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btEfshop:hover:not(:disabled) {
+  background: rgb(94, 194, 105);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btEfshop:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.btdelete {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 3em;
+  border-radius: 1rem;
+  color: rgb(221, 82, 76);
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btdelete:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btdelete:hover:not(:disabled) {
+  background: rgb(221, 82, 76);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btdelete:disabled {
+  cursor: auto;
+  color: grey;
+}
+.btpayment {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 5em;
+  border-radius: 1rem;
+  color: rgb(78, 128, 238);
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btpayment:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btpayment:hover:not(:disabled) {
+  background: rgb(78, 128, 238);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btpayment:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.btedit {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 3em;
+  border-radius: 1rem;
+  color: rgb(233, 126, 59);
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btedit:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btedit:hover:not(:disabled) {
+  background: rgb(233, 126, 59);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btedit:disabled {
+  cursor: auto;
+  color: grey;
+}
+
+.btadmindelete {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 4em;
+  border-radius: 1rem;
+  color:rgb(221, 82, 76);
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btadmindelete:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btadmindelete:hover:not(:disabled) {
+  background: rgb(221, 82, 76);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btadmindelete:disabled {
+  cursor: auto;
+  color: grey;
+}
+.btaddupdate {
+  background-color: #eee;
+  border: none;
+  font-size: 1rem;
+  width: 5em;
+  border-radius: 1rem;
+  color: rgb(94, 194, 105);
+  box-shadow: 0 0.3rem #dfd9d9;
+  cursor: pointer;
+}
+.btaddupdate:active {
+  color: white;
+  box-shadow: 0 0.1rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+.btaddupdate:hover:not(:disabled) {
+  background: rgb(94, 194, 105);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+.btaddupdate:disabled {
+  cursor: auto;
+  color: grey;
 }
