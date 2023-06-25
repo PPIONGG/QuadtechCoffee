@@ -10,13 +10,8 @@ npm i json-server
 
 - json-server --watch db.json --port 4000
 
-
 ## install All Project
+
 - npm install react-router-dom axios json-server
 - npm install nanoid
 - npm install react-icons --save
-
-
-
-
-
