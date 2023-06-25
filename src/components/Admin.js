@@ -229,11 +229,13 @@ function Admin() {
             X
           </Link>
           <div className={styles.formadd}>
-            <div className={styles.texthead}>Add Menu</div>
+            <div className={styles.texthead}>
+            {values.editId ? "Edit Menu" : "Add Menu"}
+            </div>
             <div className={styles.listinput}>
               <form onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="imgURL">Image Url:</label>
+                  <label htmlFor="imgURL">Image Url :</label>
                   <div className={styles.inputtext}>
                     <input
                       type="text"
@@ -248,7 +250,7 @@ function Admin() {
                   </div>
                 </div>
                 <div className={styles.inputtext}>
-                  <label htmlFor="name">Name:</label>
+                  <label htmlFor="name">Name :</label>
                   <input
                     type="text"
                     name="name"
@@ -261,7 +263,7 @@ function Admin() {
                   />
                 </div>
                 <div className={styles.inputtext}>
-                  <label htmlFor="hot">Hot:</label>
+                  <label htmlFor="hot">Hot :</label>
                   <input
                     type="number"
                     name="hot"
@@ -277,7 +279,7 @@ function Admin() {
                   />
                 </div>
                 <div className={styles.inputtext}>
-                  <label htmlFor="cold">Cold:</label>
+                  <label htmlFor="cold">Cold :</label>
                   <input
                     type="number"
                     name="cold"
@@ -293,7 +295,7 @@ function Admin() {
                   />
                 </div>
                 <div className={styles.inputtext}>
-                  <label htmlFor="smoothie">Smoothie:</label>
+                  <label htmlFor="smoothie">Smoothie :</label>
                   <input
                     type="number"
                     name="smoothie"

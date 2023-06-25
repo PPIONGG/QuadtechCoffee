@@ -16,41 +16,15 @@
   color: black;
 }
 .bthome {
-  left: 30px;
+  font-size: 22px;
+  right: 18px;
+  top: 30px;
   position: absolute;
-}
-.Btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition-duration: 0.3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: #eee;
+  text-decoration: none;
+  color: inherit;
 }
-button.Btn {
-  color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-}
-button.Btn:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-}
-.mgbtn {
-  margin-left: -0.4em;
-  margin-bottom: -0.5em;
-}
+
 .main2 {
   overflow: hidden;
 }

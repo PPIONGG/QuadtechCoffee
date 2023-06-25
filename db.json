@@ -91,47 +91,5 @@
       }
     }
   ],
-  "bill": [
-    [
-      {
-        "name": "Caramel Macchiato",
-        "quantity": 3,
-        "totalPrice": 210
-      }
-    ],
-    [
-      {
-        "name": "Espresso",
-        "quantity": 1,
-        "totalPrice": 55
-      }
-    ],
-    [
-      {
-        "name": "Americano",
-        "quantity": 1,
-        "totalPrice": 55
-      },
-      {
-        "name": "Espresso",
-        "quantity": 1,
-        "totalPrice": 65
-      },
-      {
-        "name": "Latte",
-        "quantity": 1,
-        "totalPrice": 70
-      },
-      {
-        "name": "Cappuccino",
-        "quantity": 1,
-        "totalPrice": 75
-      },
-      {
-        "name": "Caramel Macchiato",
-        "quantity": 1,
-        "totalPrice": 80
-      }
-    ]
-  ]
+  "bill": []
 }

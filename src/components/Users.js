@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Users.module.css";
 import { AiOutlineShoppingCart, AiOutlineDelete } from "react-icons/ai";
-import { GrHomeRounded } from "react-icons/gr";
 import "./../App.css";
 
 function Users() {
@@ -111,11 +110,7 @@ function Users() {
       <div className={styles.main1}>
         <div className={styles.textqd}>Quadra Coffee</div>
         <Link to="/" className={styles.bthome}>
-          <button className={styles.Btn}>
-            <div className={styles.mgbtn}>
-              <GrHomeRounded />
-            </div>
-          </button>
+          X
         </Link>
       </div>
       <div className={styles.main2}>
