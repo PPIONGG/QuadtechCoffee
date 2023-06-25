@@ -2,7 +2,7 @@
 
 ## ติดตั้ง json server
 
-npm i json-server
+npm i json-server / npm i -g json-server
 
 ## ต้องรันการทำงานพร้อมกัน ทั้ง node และ json server
 
