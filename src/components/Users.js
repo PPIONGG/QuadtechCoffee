@@ -30,6 +30,7 @@ function Users() {
     const newData = [...data];
     newData[index].selectedType = value;
     setData(newData);
+    console.log('value',value);
   };
 
   const incrementQuantity = (index) => {
@@ -79,7 +80,6 @@ function Users() {
   const handleDelete = (index) => {
     setPurchasedItems((prevItems) => prevItems.filter((_, i) => i !== index));
   };
-  
   const handlePayment = () => {
     console.log("ราคารวมทั้งหมด:", totalPrice);
     if (purchasedItems.length > 0) {
@@ -88,7 +88,6 @@ function Users() {
         quantity: item.quantity,
         totalPrice: item.selectedPrice * item.quantity,
       }));
-  
       axios
         .post("http://localhost:4000/bill", billData)
         .then((res) => {
@@ -104,7 +103,6 @@ function Users() {
       alert("No items to pay for.");
     }
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.main1}>

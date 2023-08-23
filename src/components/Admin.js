@@ -29,6 +29,7 @@ function Admin() {
     axios.get("http://localhost:4000/bill")
       .then((res) => {
         const mergedBills = mergeDuplicateNames(res.data);
+        console.log('log bill ' , res.data);
         setBill(mergedBills);
       })
       .catch((err) => console.log(err));
@@ -51,6 +52,7 @@ function Admin() {
             totalPrice,
           };
           nameMap.set(name, newItem);
+          console.log("nameMap", nameMap);
         }
       }
     }

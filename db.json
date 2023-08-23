@@ -23,7 +23,7 @@
     {
       "id": "W5SQ3Mh8uZjrqhJMkDEeT",
       "imgURL": "https://ajnownirun.files.wordpress.com/2015/02/latte.png",
-      "name": "Latte",
+      "name": "Latte007",
       "type": {
         "hot": 60,
         "cold": 70,
@@ -89,7 +89,30 @@
         "cold": 55,
         "smoothie": 60
       }
+    },
+    {
+      "id": "GIh0dm4CneQPiCuMhvcIK",
+      "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAu3qo9wFuYZG2-4QpjrRl8LV89d_3zxUuFw&usqp=CAU",
+      "name": "ไม่รุ้จัก",
+      "type": {
+        "hot": 12,
+        "cold": 13,
+        "smoothie": 100
+      }
     }
   ],
-  "bill": []
+  "bill": [
+    [
+      {
+        "name": "Americano",
+        "quantity": 4,
+        "totalPrice": 260
+      },
+      {
+        "name": "Espresso",
+        "quantity": 4,
+        "totalPrice": 280
+      }
+    ]
+  ]
 }
